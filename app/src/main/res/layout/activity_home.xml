@@ -309,7 +309,6 @@
                         android:layout_height="wrap_content"
                         android:text="Home"
                         android:textAlignment="center" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -323,15 +322,14 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/icon_home" />
+                        android:src="@drawable/icon_favorite" />
 
                     <TextView
                         android:id="@+id/textView13"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Home"
+                        android:text="Favorites"
                         android:textAlignment="center" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -372,13 +370,13 @@
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:layout_gravity="center"
-                            android:src="@drawable/icon_home" />
+                            android:src="@drawable/icon_cart" />
 
                         <TextView
                             android:id="@+id/textView15"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Home"
+                            android:text="Cart"
                             android:textAlignment="center" />
 
                     </LinearLayout>
@@ -396,13 +394,13 @@
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/icon_home" />
+                        android:src="@drawable/icon_profile" />
 
                     <TextView
                         android:id="@+id/textView16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Home"
+                        android:text="Profile"
                         android:textAlignment="center" />
 
                 </LinearLayout>
