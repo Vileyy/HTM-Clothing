@@ -8,6 +8,7 @@
     tools:context=".Home">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -76,9 +77,9 @@
                         android:layout_height="50dp"
                         android:layout_marginTop="75dp"
                         android:background="@drawable/background_search_home"
-                        android:ems="10"
                         android:drawableStart="@drawable/icon_search_home"
                         android:drawablePadding="6dp"
+                        android:ems="10"
                         android:hint="Search"
                         android:inputType="text"
                         android:paddingLeft="8dp"
@@ -116,10 +117,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="21dp"
-                android:textSize="20sp"
+                android:text="Categories"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:text="Categories" />
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -238,8 +239,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="18dp"
-                android:layout_marginEnd="18dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginEnd="18dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -247,22 +248,65 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:textSize="19sp"
+                    android:text="Popular Products"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:text="Popular Products" />
+                    android:textSize="19sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="See all"
-                    android:textSize="15sp"
                     android:gravity="right"
-                    android:textColor="@color/blue" />
+                    android:text="See all"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp" />
             </LinearLayout>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="3dp"
+                android:paddingStart="12dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="12dp" />
         </LinearLayout>
     </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_background"
+            android:layout_margin="32dp"
+            android:padding="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawble/icon_home"
+                        />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Home" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
