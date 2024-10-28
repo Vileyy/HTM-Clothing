@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import com.example.ecommerce_market.database.DatabaseHelper;
 
-public class Sign_up extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 
     private EditText editTextUsername, editTextEmail, editTextPassword, editTextConfirmPass;
     private Button btnSignUp;
@@ -45,19 +45,19 @@ public class Sign_up extends AppCompatActivity {
 
                 // Kiểm tra xem người dùng đã nhập đủ thông tin chưa
                 if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-                    Toast.makeText(Sign_up.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUp.this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                     return; // Dừng lại nếu có trường rỗng
                 }
 
                 // Kiểm tra xem mật khẩu có khớp không
                 if (!password.equals(confirmPassword)) {
-                    Toast.makeText(Sign_up.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUp.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                     return; // Dừng lại nếu mật khẩu không khớp
                 }
 
                 // Thêm người dùng vào cơ sở dữ liệu
                 dbHelper.addUser(username, password, email);
-                Toast.makeText(Sign_up.this, "User Registered Successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignUp.this, "User Registered Successfully", Toast.LENGTH_SHORT).show();
 
                 // Kết thúc Activity đăng ký
                 finish();
