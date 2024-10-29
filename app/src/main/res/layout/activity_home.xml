@@ -146,7 +146,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Digitals"
+                        android:text="Smart"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -167,7 +167,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Cloth"
+                        android:text="Fashion"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -265,12 +265,15 @@
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewProducts"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="3dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:paddingStart="12dp"
                 android:paddingTop="4dp"
-                android:paddingEnd="12dp" />
+                android:layout_marginBottom="80dp"
+                android:paddingEnd="12dp"/>
+               <!-- android:clipToPadding="false"-->
         </LinearLayout>
     </ScrollView>
 
