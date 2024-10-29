@@ -53,7 +53,8 @@ public class Home extends AppCompatActivity {
         itemList.add(new Item_Popular_Domain("T-Shirt NOW", 10000, "item_1", "4.8 | 3.6k đã bán", 4.8,"TP. Hồ Chí Minh"));
         itemList.add(new Item_Popular_Domain("Stylish Hat", 50000, "item_2", "4.5 | 2.1k đã bán", 4.5 ,"TP. Hồ Chí Minh"));
         itemList.add(new Item_Popular_Domain("Classic Sneakers", 80000, "item_3", "4.9 | 5.3k đã bán", 4.9,"Bình Dương"));
-        // Thêm nhiều sản phẩm khác nếu cần
+        itemList.add(new Item_Popular_Domain("Monitor Samsung", 10000, "item_4", "4.8 | 3.6k đã bán", 4.8,"Sài Gòn"));
+
     }
 
     private void setupWindowInsets(View mainView) {

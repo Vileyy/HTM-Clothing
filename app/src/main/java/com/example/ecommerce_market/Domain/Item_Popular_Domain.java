@@ -66,7 +66,7 @@ public class Item_Popular_Domain implements Parcelable {
         return location;
     }
 
-    public void setLocation(){
+    public void setLocation(String location) {
         this.location = location;
     }
 

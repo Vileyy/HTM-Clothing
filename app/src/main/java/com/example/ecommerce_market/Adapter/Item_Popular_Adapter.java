@@ -29,7 +29,7 @@ public class Item_Popular_Adapter extends RecyclerView.Adapter<Item_Popular_Adap
     @Override
     public Item_Popular_Adapter.Viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // Inflate layout cho item
-        View view = LayoutInflater.from(context).inflate(R.layout.activity_category, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_category, parent, false);
         return new Viewholder(view);
     }
 
@@ -41,6 +41,7 @@ public class Item_Popular_Adapter extends RecyclerView.Adapter<Item_Popular_Adap
         holder.titleTextView.setText(currentItem.getTitle());
         holder.priceTextView.setText(String.format("%s đ", NumberFormat.getInstance(new Locale("vi", "VN")).format(currentItem.getPrice())));
         holder.ratingTextView.setText(currentItem.getRating());
+        holder.locationTextView.setText(currentItem.getLocation());
 
         // Nếu bạn đang sử dụng hình ảnh từ drawable resources
         int imageResId = context.getResources().getIdentifier(currentItem.getImage(), "drawable", context.getPackageName());
