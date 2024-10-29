@@ -12,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ecommerce_market.Domain.Item_Popular_Domain;
 import com.example.ecommerce_market.R;
 
+import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class Item_Popular_Adapter extends RecyclerView.Adapter<Item_Popular_Adapter.Viewholder> {
     private ArrayList<Item_Popular_Domain> items;
@@ -37,7 +39,7 @@ public class Item_Popular_Adapter extends RecyclerView.Adapter<Item_Popular_Adap
 
         // Gán dữ liệu cho view
         holder.titleTextView.setText(currentItem.getTitle());
-        holder.priceTextView.setText(String.format("%s đ", currentItem.getPrice()));
+        holder.priceTextView.setText(String.format("%s đ", NumberFormat.getInstance(new Locale("vi", "VN")).format(currentItem.getPrice())));
         holder.ratingTextView.setText(currentItem.getRating());
 
         // Nếu bạn đang sử dụng hình ảnh từ drawable resources
@@ -56,7 +58,7 @@ public class Item_Popular_Adapter extends RecyclerView.Adapter<Item_Popular_Adap
         TextView priceTextView;
         TextView ratingTextView;
         TextView locationTextView;
-        // Khởi tạo constructort
+
 
         public Viewholder(@NonNull View itemView) {
             super(itemView);
