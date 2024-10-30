@@ -1,6 +1,7 @@
 package com.example.ecommerce_market.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.ecommerce_market.Detail_Products;
 import com.example.ecommerce_market.Domain.Item_Popular_Domain;
 import com.example.ecommerce_market.R;
 
@@ -46,6 +48,18 @@ public class Item_Popular_Adapter extends RecyclerView.Adapter<Item_Popular_Adap
         // Nếu bạn đang sử dụng hình ảnh từ drawable resources
         int imageResId = context.getResources().getIdentifier(currentItem.getImage(), "drawable", context.getPackageName());
         holder.imageView.setImageResource(imageResId);
+
+        // Truyền dữ liệu qua Intent khi click vào sản phẩm
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, Detail_Products.class);
+            intent.putExtra("title", currentItem.getTitle());
+            intent.putExtra("price", currentItem.getPrice());
+            intent.putExtra("rating", currentItem.getRating());
+            intent.putExtra("location", currentItem.getLocation());
+            intent.putExtra("image", currentItem.getImage());
+            intent.putExtra("description", "This is the product description");
+            context.startActivity(intent);
+        });
     }
 
     @Override

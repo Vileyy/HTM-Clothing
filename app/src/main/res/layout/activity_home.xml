@@ -20,7 +20,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"></LinearLayout>
+                android:orientation="horizontal">
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -278,8 +279,12 @@
     </ScrollView>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="match_parent"
+        android:layout_width="403dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -288,19 +293,19 @@
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/background_bottom_navigation"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
             android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_bottom_navigation"
             android:padding="4dp">
 
             <LinearLayout
                 android:layout_width="370dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:paddingStart="7dp"
-                android:paddingEnd="7dp">
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:layout_gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -418,7 +423,7 @@
             </LinearLayout>
         </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <!--        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/blue_white"
